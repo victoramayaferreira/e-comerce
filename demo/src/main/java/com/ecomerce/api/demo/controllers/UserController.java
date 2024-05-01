@@ -38,17 +38,17 @@ public class UserController {
     }
 
     @GetMapping("/{id}")
-    public Optional<UserModel> getById(@PathVariable Long id) {
+    public Optional<UserModel> getById(@PathVariable("id") Long id) {
         return userService.getById(id);
     }
 
     @PutMapping("/{id}")
-    public UserModel updateById(@PathVariable Long id, @RequestBody UserModel request) {
+    public UserModel updateById(@PathVariable("id") Long id, @RequestBody UserModel request) {
         return userService.updateById(request, id);
     }
 
     @DeleteMapping("/{id}")
-    public void delete(@PathVariable Long id) {
+    public void delete(@PathVariable("id") Long id) {
         userService.delete(id);
     }
 }
