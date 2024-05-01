@@ -14,7 +14,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Table(name = "user")
+@Table(name = "users")
 @NoArgsConstructor(access = AccessLevel. PRIVATE)
 @Schema(name = "User", description = "User model schema")
 @AllArgsConstructor
